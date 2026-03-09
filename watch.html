@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Watch Video - MMB Video Platform</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+<div class="header-top">
+<a href="index.html" class="logo">MMB Video Platform</a>
+<div class="search-container">
+<input type="text" id="search-input" placeholder="Search videos..." />
+<button id="search-btn">🔍</button>
+</div>
+</div>
+<p>Multimedia Broadcasting Streaming System</p>
+</header>
+
+<div class="watch-container">
+    
+    <!-- Main Video Player Section -->
+    <div class="main-player">
+        <video id="main-video" controls autoplay>
+            <source id="video-source" src="" type="video/mp4">
+        </video>
+        
+        <!-- Performance Monitor -->
+        <div class="performance-monitor">
+            <h4>📊 Performance Monitor</h4>
+            <div class="perf-stats">
+                <div class="stat">
+                    <span class="label">Current Quality:</span>
+                    <span id="current-quality" class="value">720p</span>
+                </div>
+                <div class="stat">
+                    <span class="label">Video File:</span>
+                    <span id="file-name" class="value">-</span>
+                </div>
+                <div class="stat">
+                    <span class="label">File Size:</span>
+                    <span id="file-size" class="value">Calculating...</span>
+                </div>
+                <div class="stat">
+                    <span class="label">Est. Bandwidth:</span>
+                    <span id="bandwidth" class="value">-</span>
+                </div>
+                <div class="stat">
+                    <span class="label">Resolution:</span>
+                    <span id="resolution" class="value">-</span>
+                </div>
+                <div class="stat">
+                    <span class="label">Status:</span>
+                    <span id="quality-status" class="value status-warning">Using fallback (single quality file)</span>
+                </div>
+            </div>
+            <div class="quality-comparison">
+                <h5>Expected File Sizes by Quality:</h5>
+                <div class="comparison-grid">
+                    <div class="comp-item">360p: ~5-10 MB</div>
+                    <div class="comp-item">480p: ~15-25 MB</div>
+                    <div class="comp-item">720p: ~40-60 MB</div>
+                    <div class="comp-item">1080p: ~100-150 MB</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="video-controls">
+            <div class="quality-selector">
+                <label>Quality:</label>
+                <div class="quality-buttons">
+                    <button class="quality-btn" data-quality="360">360p</button>
+                    <button class="quality-btn" data-quality="480">480p</button>
+                    <button class="quality-btn active" data-quality="720">720p</button>
+                    <button class="quality-btn" data-quality="1080">1080p</button>
+                </div>
+            </div>
+        </div>
+        <div class="video-details">
+            <h2 id="video-title">Loading...</h2>
+            <p id="video-description">Loading...</p>
+        </div>
+    </div>
+
+    <!-- Recommendations Sidebar -->
+    <div class="recommendations">
+        <h3>Recommended Videos</h3>
+        <div id="recommended-videos">
+            <!-- Recommendation cards will be populated by JavaScript -->
+        </div>
+    </div>
+
+</div>
+
+<script src="watch.js"></script>
+
+</body>
+</html>

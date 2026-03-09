@@ -1,0 +1,28 @@
+# Node modules (if ever used)
+node_modules/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# Environment files
+.env
+
+# Ignore videos
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.webm
+
+# Ignore video folders
+videos/
+assets/videos/
+media/videos/

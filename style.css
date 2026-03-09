@@ -1,0 +1,308 @@
+body{
+margin:0;
+font-family:Arial, sans-serif;
+background:#0f0f0f;
+color:white;
+}
+
+header{
+background:#141414;
+padding:20px;
+text-align:center;
+position: sticky;
+top: 0;
+z-index: 100;
+border-bottom: 1px solid #272727;
+}
+
+.header-top {
+display: flex;
+justify-content: space-between;
+align-items: center;
+max-width: 1400px;
+margin: 0 auto 10px auto;
+gap: 20px;
+}
+
+header .logo {
+text-decoration: none;
+color: white;
+font-size: 24px;
+font-weight: bold;
+flex-shrink: 0;
+transition: color 0.2s;
+cursor: pointer;
+}
+
+header .logo:hover {
+color: #3ea6ff;
+}
+
+header h1 {
+margin: 0;
+flex-shrink: 0;
+}
+
+/* Search Bar */
+.search-container {
+display: flex;
+flex: 1;
+max-width: 600px;
+gap: 8px;
+}
+
+#search-input {
+flex: 1;
+padding: 10px 16px;
+background: #222;
+border: 1px solid #303030;
+border-radius: 20px;
+color: white;
+font-size: 14px;
+outline: none;
+transition: border-color 0.2s;
+}
+
+#search-input:focus {
+border-color: #065fd4;
+background: #181818;
+}
+
+#search-input::placeholder {
+color: #666;
+}
+
+#search-btn {
+background: #303030;
+border: none;
+padding: 10px 20px;
+border-radius: 20px;
+color: white;
+cursor: pointer;
+font-size: 16px;
+transition: background 0.2s;
+}
+
+#search-btn:hover {
+background: #3f3f3f;
+}
+
+/* Home Page Grid */
+.video-grid{
+display:grid;
+grid-template-columns:repeat(3, 1fr);
+gap:20px;
+padding:30px;
+max-width: 1400px;
+margin: 0 auto;
+}
+
+.video-card{
+background:#181818;
+padding:15px;
+border-radius:10px;
+transition:transform 0.3s, background 0.2s;
+cursor: pointer;
+}
+
+.video-card:hover{
+transform:scale(1.05);
+background:#282828;
+}
+
+video{
+width:100%;
+border-radius:8px;
+}
+
+.video-card h3{
+margin:10px 0 5px 0;
+}
+
+.video-info p {
+margin: 5px 0;
+color: #aaa;
+font-size: 14px;
+}
+
+/* Watch Page Layout */
+.watch-container {
+display: flex;
+padding: 24px;
+gap: 24px;
+max-width: 1800px;
+margin: 0 auto;
+}
+
+.main-player {
+flex: 1;
+min-width: 0;
+}
+
+.main-player video {
+width: 100%;
+max-height: 720px;
+background: black;
+border-radius: 12px;
+}
+
+.video-details {
+margin-top: 16px;
+}
+
+.video-details h2 {
+margin: 0 0 8px 0;
+font-size: 20px;
+}
+
+.video-details p {
+color: #aaa;
+margin: 0;
+line-height: 1.6;
+}
+
+/* Recommendations Sidebar */
+.recommendations {
+width: 400px;
+flex-shrink: 0;
+}
+
+.recommendations h3 {
+margin: 0 0 16px 0;
+font-size: 18px;
+}
+
+#recommended-videos {
+display: flex;
+flex-direction: column;
+gap: 12px;
+}
+
+.recommendation-card {
+display: flex;
+gap: 12px;
+background: #181818;
+padding: 8px;
+border-radius: 8px;
+transition: background 0.2s;
+cursor: pointer;
+}
+
+.recommendation-card:hover {
+background: #282828;
+}
+
+.recommendation-card video {
+width: 168px;
+height: 94px;
+object-fit: cover;
+border-radius: 6px;
+flex-shrink: 0;
+}
+
+.rec-info {
+flex: 1;
+min-width: 0;
+}
+
+.rec-info h4 {
+margin: 0 0 4px 0;
+font-size: 14px;
+font-weight: 600;
+overflow: hidden;
+text-overflow: ellipsis;
+display: -webkit-box;
+-webkit-line-clamp: 2;
+-webkit-box-orient: vertical;
+}
+
+.rec-info p {
+margin: 0;
+color: #aaa;
+font-size: 12px;
+overflow: hidden;
+text-overflow: ellipsis;
+white-space: nowrap;
+}
+
+/* Quality Selector */
+.video-controls {
+    margin-top: 12px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.quality-selector {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.quality-selector label {
+    font-size: 14px;
+    color: #aaa;
+}
+
+.quality-buttons {
+    display: flex;
+    gap: 4px;
+    background: #272727;
+    padding: 4px;
+    border-radius: 6px;
+}
+
+.quality-btn {
+    background: transparent;
+    border: none;
+    color: #aaa;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.quality-btn:hover {
+    background: #3f3f3f;
+    color: white;
+}
+
+.quality-btn.active {
+    background: #065fd4;
+    color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .video-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 1024px) {
+    .watch-container {
+        flex-direction: column;
+    }
+    
+    .recommendations {
+        width: 100%;
+    }
+    
+    .recommendation-card video {
+        width: 140px;
+        height: 79px;
+    }
+}
+
+@media (max-width: 768px) {
+    .video-grid {
+        grid-template-columns: 1fr;
+        padding: 16px;
+    }
+    
+    .watch-container {
+        padding: 16px;
+    }
+}

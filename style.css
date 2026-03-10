@@ -274,6 +274,89 @@ white-space: nowrap;
     color: white;
 }
 
+/* Performance Monitor */
+.performance-monitor {
+    background: #1a1a1a;
+    border-radius: 8px;
+    padding: 16px;
+    margin-top: 16px;
+    border: 1px solid #272727;
+}
+
+.performance-monitor h4 {
+    margin: 0 0 12px 0;
+    font-size: 16px;
+    color: #fff;
+}
+
+.performance-monitor h5 {
+    margin: 16px 0 8px 0;
+    font-size: 14px;
+    color: #aaa;
+}
+
+.perf-stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.perf-stats .stat {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 12px;
+    background: #252525;
+    border-radius: 6px;
+}
+
+.perf-stats .label {
+    font-size: 13px;
+    color: #888;
+}
+
+.perf-stats .value {
+    font-size: 13px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.status-success {
+    color: #4caf50 !important;
+}
+
+.status-warning {
+    color: #ff9800 !important;
+}
+
+.quality-comparison {
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid #272727;
+}
+
+.comparison-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+}
+
+.comp-item {
+    background: #252525;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    text-align: center;
+    color: #aaa;
+}
+
+.comp-item.current-base {
+    background: #065fd4;
+    color: white;
+    font-weight: 600;
+}
+
 /* Responsive Design */
 @media (max-width: 1200px) {
     .video-grid {
